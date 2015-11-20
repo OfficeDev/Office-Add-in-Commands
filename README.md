@@ -1,4 +1,4 @@
-# Office Add-in Fabric UI Sample
+# Office Add-in Commands Samples
 These are Excel and Word add-in samples that use Add-in Commands to extend the Office User Interface
 
 For general information about using Commands, see [Add link to published docs]
