@@ -4,6 +4,8 @@
 ## About the dev preview
 **Important**: The add-in commands feature for Word, Excel and PowerPoint will be in preview soon but it has not being released yet. We are making this repository public as we work on the samples prior to the release of the feature; you can take an early look at some of the changes we are doing to the add-in manifest that will help you model commands. We'll let you know when the preview of feature is live and we will publish additional detailed documentation of how to use it.
 
+Check out this [video](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/316) for an overview of the feature. 
+
 ##Samples description
 These are Excel and Word add-in samples that use Add-in Commands to extend the Office User Interface
 
