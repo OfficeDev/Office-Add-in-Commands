@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+<!-- BeginBasicSettings: Add-in metadata, used for all versions of Office unless override provided -->
+  
+  <!--IMPORTANT! Id must be unique for your add-in, if you clone this manifest ensure that you change this id to your own GUID -->
+  <Id>657a32a9-ab8a-4579-ac9f-df1a11a64e52</Id>
+  
+  <!--Version. Updates from the store only get triggered if there is a version change -->
+  <Version>1.0.0.0</Version>
+  <ProviderName>Contoso</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <!-- The display name of your add-in. Used on the store and various placed of the Office UI such as the add-ins dialog -->
+  <DisplayName DefaultValue="OData Integration" />
+  <Description DefaultValue="OData Integration"/>
+  
+  <!--Icon for your add-in. Used on installation screens and the add-ins dialog -->
+  <IconUrl DefaultValue="https://i.imgur.com/MPuvMiq.png" />
+  
+        <!--Todo: Add requirement sets and remove  commenting of high res icon -->
+      <!--The HighResolutionIcon element is commented because it is valid only for 1.1 (or above) versions of the manifest.
+          To use this property, convert this manifest to version 1.1 by adding an API set in the Activation tab of the manifest editor.-->
+      <!--<HighResolutionIconUrl DefaultValue="https://i.imgur.com/MPuvMiq.png" />-->
+  
+  <!--Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list -->
+  <AppDomains>
+    <AppDomain>AppDomain1</AppDomain>
+    <AppDomain>AppDomain2</AppDomain>
+    <AppDomain>AppDomain3</AppDomain>
+  </AppDomains>
+  <!--EndBasicSettings-->
+  
+  <!--BeginTaskpaneMode integration. Office 2013 and any client that doesn't understand commands will use this section.
+    This section will also be used if there are no VersionOverrides -->
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://odsample.azurewebsites.net/Pages/Home.aspx" />
+  </DefaultSettings>
+  <!--EndTaskpaneMode integration -->
+  
+  <Permissions>ReadWriteDocument</Permissions>
+
+<!--BeginAddinCommandsMode integration-->
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <!-- Optional, override the description of the Add-in -->
+    <Description resid="residToolTip" />
+    
+    <!--Required, hosts node. Each host can have a different set of commands -->
+    <Hosts>
+      <!--Specific host. Workbook=Excel, Document=Word, Presentation=PowerPoint -->
+      <Host xsi:type="Workbook">
+        <!-- Form factor. Currenly only DesktopFormFactor is supported. We will add TabletFormFactor and PhoneFormFactor in the future-->
+        <DesktopFormFactor>
+          <!--Function file is an html page that includes the javascript where functions for ExecuteAction will be called. 
+            Think of the FunctionFile as the "code behind" ExecuteFunction -->
+          <FunctionFile resid="residTaskpaneUrl1" />
+          
+          <!--PrimaryCommandSurface==Main Office Ribbon-->
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <!--Use OfficeTab to extend an existing Tab. Use CustomTab to create a new tab -->
+            <!-- Documentation includes all the IDs currently tested to work -->
+            <OfficeTab id="TabData">
+              <!--Group. Ensure you provide a unique id. Recommendation for any IDs is to namespace using your companyname-->
+              <Group id="Contoso.Group1Id1">
+                
+                <!--Label for your group. resid must point to a ShortString resource -->
+                <Label resid="residLabel4" />
+                <!--Icons. Required sizes 16,31,80, optional 20, 24, 40, 48, 64. Strongly recommended to provide all sizes for great UX -->
+                <!--Use PNG icons and remember that all URLs on the resources section must use HTTPS -->
+                <Icon>
+                  <bt:Image size="16" resid="icon1_16x16" />
+                  <bt:Image size="32" resid="icon1_32x32" />
+                  <bt:Image size="80" resid="icon1_80x80" />
+                </Icon>
+                <!--Control. It can be of type "Button" or "Menu" -->
+                <Control xsi:type="Button" id="Contoso.Button1Id1">
+                  <!--Label for your button. resid must point to a ShortString resource -->
+                  <Label resid="residLabel" />
+                  <Supertip>
+                    <!--ToolTip title. resid must point to a ShortString resource -->
+                    <Title resid="residLabel" />
+                    <!--ToolTip description. resid must point to a LongString resource -->
+                    <Description resid="residToolTip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon1_16x16" />
+                    <bt:Image size="32" resid="icon1_32x32" />
+                    <bt:Image size="80" resid="icon1_80x80" />
+                  </Icon>
+                  <!--This is what happens when the command is triggered (E.g. click on the Ribbon). Supported actions are ExecuteFuncion or ShowTaskpane-->
+                  <Action xsi:type="ExecuteFunction">
+                    <!--The name of the function must exist on the FunctionFile DOM. You can put this in a different JS file and then load it on the FunctionFile -->
+                    <FunctionName>ODSampleData.ODataUX.getButton</FunctionName>
+                  </Action>
+                </Control>
+
+                <Control xsi:type="Button" id="Contoso.Button2Id1">
+                  <Label resid="residLabel2" />
+                  <Supertip>
+                    <Title resid="residLabel" />
+                    <Description resid="residToolTip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon1_16x16" />
+                    <bt:Image size="32" resid="icon2_32x32" />
+                    <bt:Image size="80" resid="icon1_80x80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>ODSampleData.ODataUX.saveButton</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="Contoso.Button3Id1">
+                  <Label resid="residLabel3" />
+                  <Supertip>
+                    <Title resid="residLabel" />
+                    <Description resid="residToolTip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon1_16x16" />
+                    <bt:Image size="32" resid="icon3_32x32" />
+                    <bt:Image size="80" resid="icon1_80x80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="residTaskpaneUrl2" />
+                  </Action>
+                </Control>
+              </Group>
+              <Label resid="residLabel4" />
+            </OfficeTab>
+          </ExtensionPoint>
+
+          <!-- ContextMenu extends selected context menus (E.g. right click menu)--> 
+          <ExtensionPoint xsi:type="ContextMenu">
+            <!--The id of the menu specifies the existing context menu being extended-->
+            <!--ContextMenuCell (Excel) and ContextMenuText (Word) are currently supported-->
+          <OfficeMenu id="ContextMenuCell">
+            <Control xsi:type="Menu" id="Contoso.TestMenu2">
+              <Label resid="residLabel3" />
+              <Supertip>
+                <Title resid="residLabel" />
+                <Description resid="residToolTip" />
+              </Supertip>
+              <Icon>
+                <bt:Image size="16" resid="icon1_32x32" />
+                <bt:Image size="32" resid="icon1_32x32" />
+                <bt:Image size="80" resid="icon1_32x32" />
+              </Icon>
+              <Items>
+                <Item id="showGallery2">
+                  <Label resid="residLabel3"/>
+                  <Supertip>
+                    <Title resid="residLabel" />
+                    <Description resid="residToolTip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon1_32x32" />
+                    <bt:Image size="32" resid="icon1_32x32" />
+                    <bt:Image size="80" resid="icon1_32x32" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <!--TaskPaneId is required. It is currently not used by the framework but it will be in a future iteration -->
+                    <TaskpaneId>MyTaskPaneID1</TaskpaneId>
+                    <!--The URL to show inside the taskpane -->
+                    <SourceLocation resid="residTaskpaneUrl2" />
+                  </Action>
+                </Item>
+              <Item id="showGallery3">
+                  <Label resid="residLabel5"/>
+                  <Supertip>
+                    <Title resid="residLabel" />
+                    <Description resid="residToolTip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon1_32x32" />
+                    <bt:Image size="32" resid="icon1_32x32" />
+                    <bt:Image size="80" resid="icon1_32x32" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>MyTaskPaneID2</TaskpaneId>
+                    <SourceLocation resid="residTaskpaneUrl2" />
+                  </Action>
+                </Item>
+              </Items>
+            </Control>
+            <Control xsi:type="Button" id="Contoso.TestMenu1">
+                <Label resid="residLabel" />
+                <Supertip>
+                  <Title resid="residLabel" />
+                  <Description resid="residToolTip" />
+                </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="icon1_16x16" />
+                  <bt:Image size="32" resid="icon3_32x32" />
+                  <bt:Image size="80" resid="icon1_80x80" />                  
+                </Icon>
+                <Action xsi:type="ExecuteFunction">
+                  <FunctionName>ODSampleData.ODataUX.getButton</FunctionName>
+                </Action>
+            </Control>			
+          </OfficeMenu>
+         </ExtensionPoint>
+
+		 </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    
+    <!--You can use resources across hosts and form factors -->
+    <!--All resources are localizable. See https://msdn.microsoft.com/en-us/library/office/fp161083.aspx for info on localization -->
+    <Resources>
+       <bt:Images>
+        <bt:Image id="icon1_16x16" DefaultValue="https://i.imgur.com/xV3upTT.png">
+          <bt:Override Locale="ja-jp" Value="https://i.imgur.com/xV3upTT.png" />
+        </bt:Image>
+        <bt:Image id="icon1_32x32" DefaultValue="https://i.imgur.com/kBw0iKX.png">
+          <bt:Override Locale="ja-jp" Value="https://i.imgur.com/kBw0iKX.png" />
+        </bt:Image>
+        <bt:Image id="icon1_80x80" DefaultValue="https://i.imgur.com/xV3upTT.png">
+          <bt:Override Locale="ja-jp" Value="https://i.imgur.com/xV3upTT.png" />
+        </bt:Image>
+        <bt:Image id="icon2_32x32" DefaultValue="https://i.imgur.com/LltG56v.png">
+        </bt:Image>
+        <bt:Image id="icon3_32x32" DefaultValue="https://i.imgur.com/SeiInaW.png">
+        </bt:Image>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="residTaskpaneUrl1" DefaultValue="https://odsample.azurewebsites.net/Pages/Home.aspx?11">
+          <bt:Override Locale="ja-jp" Value="https://odsample.azurewebsites.net/Pages/Home.aspx?11" />
+        </bt:Url>
+        <bt:Url id="residTaskpaneUrl2" DefaultValue="https://odsample.azurewebsites.net/Pages/Home.aspx?33">
+        </bt:Url>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <!-- ShortStrings max characters==125 -->
+        <bt:String id="residLabel" DefaultValue="Get Data">
+          <bt:Override Locale="ja-jp" Value="JA-JP Multiple Buttons" />
+        </bt:String>
+        <bt:String id="residLabel2" DefaultValue="Save Data">
+          <bt:Override Locale="ja-jp" Value="JA-JP Multiple Buttons" />
+        </bt:String>
+        <bt:String id="residLabel3" DefaultValue="Compare Data">
+          <bt:Override Locale="ja-jp" Value="JA-JP Multiple Buttons" />
+        </bt:String>
+        <bt:String id="residLabel4" DefaultValue="OData Integration">
+          <bt:Override Locale="ja-jp" Value="JA-JP Multiple Buttons" />
+        </bt:String>
+        <bt:String id="residLabel5" DefaultValue="Another Command">
+          <bt:Override Locale="ja-jp" Value="JA-JP Multiple Buttons" />
+        </bt:String>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+         <!-- ShortStrings max characters==250 -->
+        <bt:String id="residToolTip" DefaultValue="Multiple Buttons Tooltip">
+          <bt:Override Locale="ja-jp" Value="JA-JP Multiple Buttons Tooltip" />
+        </bt:String>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+  <!--EndAddinCommandsMode integration-->
+  
+  </OfficeApp>
+
