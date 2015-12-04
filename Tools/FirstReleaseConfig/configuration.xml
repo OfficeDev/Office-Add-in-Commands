@@ -1,0 +1,36 @@
+<!-- Office 365 client configuration file sample. To be used for Office 365 ProPlus 2016 apps, 
+     Office 365 Business 2016 apps, Project Pro for Office 365 and Visio Pro for Office 365. 
+     
+     To download the deployment tool visit: https://www.microsoft.com/en-us/download/details.aspx?id=49117
+
+     For detailed information regarding configuration options visit: http://aka.ms/ODT. 
+     To use the configuration file be sure to remove the comments
+
+     For Office 365 client apps (verion 2013) you will need to use the 2013 version of the 
+     Office Deployment Tool which can be downloaded from http://aka.ms/ODT2013
+
+     The following sample allows you to download and install Office 365 ProPlus 2016 apps 
+     and Visio Pro for Office 365 directly from the Office CDN using the First Release Branch 
+     settings  -->
+
+
+
+<Configuration>
+
+  <Add OfficeClientEdition="32" Branch="FirstReleaseCurrent">
+    <Product ID="O365ProPlusRetail">
+      <Language ID="en-us" />
+    </Product>
+  </Add>
+
+    <Updates Enabled="TRUE" /> 
+    <Display Level="None" AcceptEULA="TRUE" />  
+    <Logging Level="Standard" Path="%temp%" /> 
+
+  <!--  <Updates Enabled="TRUE" Branch="Current" /> -->
+
+  <!--  <Display Level="None" AcceptEULA="TRUE" />  -->
+
+  <!--  <Property Name="AUTOACTIVATE" Value="1" />  -->
+
+</Configuration>
