@@ -21,12 +21,13 @@ Here is how the samples look when running:
 ### Step 1. Setup your environment
 
 
-- **Office Desktop**: Ensure that you have the latest version of Office installed. Add-in commands requires build **16.6366.0000** or higher. Learn how to [Install the latest version of Office applications](http://aka.ms/latestoffice).
+- **Office Desktop**: Ensure that you have the latest version of Office installed. Add-in commands requires build **16.6366.0000** or higher. Learn how to [Install the latest version of Office applications](http://aka.ms/latestoffice). 
+	- Once you have the latest build installed make sure to download, unzip and run this [Registry key ](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/raw/master/Tools/AddInCommandsUndark/EnableAppCmdXLWD.zip)on your machine to activate the feature. 
 - Office Online (Coming soon...Excel Only at the moment): There is no additional setup. 
 
-### Step 2. Use sample manifests
-We strongly recommend you to use one of our sample manifests ([Excel](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Excel/Manifest/ExcelAddinWithCommandsOnDataTab.xml), [Word](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Word/manifest/CitationSample.xml)), make small modifications (e.g. make them point to your add-in instead) and test often. 
-
+### Step 2. Create your manifest
+We strongly recommend you to use one of our sample manifests as a starting point ([Excel](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Excel/Manifest/ExcelAddinWithCommandsOnDataTab.xml), [Word](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Word/manifest/CitationSample.xml)), make small modifications (e.g. make them point to your add-in instead, use your icons) and test often. 
+ 
 
 ### Step 3. Deploy add-in manifest and test the add-in
 During the developer preview the only alternative to test your add-in is to sideload it.
