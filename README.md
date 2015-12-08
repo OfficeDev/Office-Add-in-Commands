@@ -34,7 +34,7 @@ During the developer preview the only alternative to test your add-in is to side
 
 
 - **Office Desktop**. Sideload you add-in via a [network share](https://msdn.microsoft.com/EN-US/library/office/fp123503.aspx). 
-	- Once side loaded, given a limitation on the preview, you still have to go to `Insert>My Add-ins` and click the `Refresh` button to ensure the Add-in shows. 
+	- Once side loaded you have to go to `Insert>My Add-ins` and click the `Refresh` button to ensure the Add-in shows. Do this any time you need to refresh your Ribbon.
 - Office Online clients (Coming soon). Simply go to `Insert Tab>Office Add-ins>Upload Add-in`. The add-in will be displayed for that session only. 
 
 Full documentation and known issues are on the way and will be published soon.  
