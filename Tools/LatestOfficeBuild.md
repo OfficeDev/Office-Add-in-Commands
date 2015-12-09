@@ -6,7 +6,7 @@ New developer features, including those still in preview, are delivered first to
 
 Office 365 Home, Personal and University Subscribers, install the [Insiders Build](https://products.office.com/en-us/office-insider)
 
-Office 365 Commercial customers, opt-in for First Release. The simplified steps to install the [First Release Build](http://aka.ms/froninsiders) are:
+Office 365 Commercial customers, opt-in for First Release. The simplified steps to install the [First Release Build](https://support.office.com/en-us/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead?ui=en-US&rs=en-US&ad=US) are:
 
 1.	Download the [Office 2016 Deployment Tool](http://www.microsoft.com/en-us/download/details.aspx?id=49117). 
 2.	Run the tool, this will extract 2 files. **Setup.exe** and **configuration.xml**.
