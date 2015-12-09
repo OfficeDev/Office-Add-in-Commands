@@ -30,7 +30,7 @@ We strongly recommend you to use one of our sample manifests as a starting point
  
 
 ### Step 3. Deploy add-in manifest and test the add-in
-During the developer preview the only alternative to test your add-in is to sideload it.
+During the developer preview the only alternative to test your add-in is to sideload it. Deploying directly from VS is **NOT** supported yet, you must sideload your manifest using one of the methods below. 
 
 
 - **Office Desktop**. Sideload you add-in via a [network share](https://msdn.microsoft.com/EN-US/library/office/fp123503.aspx). 
