@@ -22,7 +22,7 @@ Here is how the samples look when running:
 
 
 - **Office Desktop**: Ensure that you have the latest version of Office installed. Add-in commands requires build **16.0.6366.0000** or higher. Learn how to [Install the latest version of Office applications](http://aka.ms/latestoffice). 
-	- Once you have the latest build installed make sure to download, unzip and run this [Registry key ](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/raw/master/Tools/AddInCommandsUndark/EnableAppCmdXLWD.zip)on your machine to activate the feature. 
+	- **Important**: Once you have the latest build installed make sure to download, unzip and run this [Registry key ](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/raw/master/Tools/AddInCommandsUndark/EnableAppCmdXLWD.zip)on your machine to activate the feature. 
 - Office Online (Coming soon...Excel Only at the moment): There is no additional setup. 
 
 ### Step 2. Create your manifest
