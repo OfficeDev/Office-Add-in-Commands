@@ -21,7 +21,7 @@ Here is how the samples look when running:
 ### Step 1. Setup your environment
 
 
-- **Office Desktop**: Ensure that you have the latest version of Office installed. Add-in commands requires build **16.0.6326.0000** or higher. Learn how to [Install the latest version of Office applications](http://aka.ms/latestoffice). 
+- **Office Desktop**: Ensure that you have the latest version of Office installed. Add-in commands require build **16.0.6326.0000** or higher. Learn how to [Install the latest version of Office applications](http://aka.ms/latestoffice). 
 	- **Important**: Once you have the latest build installed make sure to download, unzip and run this [Registry key ](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/raw/master/Tools/AddInCommandsUndark/EnableAppCmdXLWD.zip)on your machine to activate the feature. 
 - Office Online (Excel online coming soon, should be available by December 11th): There is no additional setup. 
 
