@@ -1,4 +1,7 @@
 This Add-in Command sample supports communication between Excel and OData source. 
+
+IMPORTANT: The Add-in must be sideloaded 
+
 After install this Add-in Command in Excel or Excel online, user can
 1. Retrieve data from Odata source
 2. Compare local data with data in Odata source
