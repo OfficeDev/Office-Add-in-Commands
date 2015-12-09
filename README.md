@@ -17,11 +17,11 @@ Here is how the samples look when running:
 
 
 
-## Step by step instructions
+## Quick Start
 ### Step 1. Setup your environment
 
 
-- **Office Desktop**: Ensure that you have the latest version of Office installed. Add-in commands requires build **16.0.6366.0000** or higher. Learn how to [Install the latest version of Office applications](http://aka.ms/latestoffice). 
+- **Office Desktop**: Ensure that you have the latest version of Office installed. Add-in commands requires build **16.0.6326.0000** or higher. Learn how to [Install the latest version of Office applications](http://aka.ms/latestoffice). 
 	- **Important**: Once you have the latest build installed make sure to download, unzip and run this [Registry key ](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/raw/master/Tools/AddInCommandsUndark/EnableAppCmdXLWD.zip)on your machine to activate the feature. 
 - Office Online (Coming soon...Excel Only at the moment): There is no additional setup. 
 
@@ -35,9 +35,13 @@ During the developer preview the only alternative to test your add-in is to side
 
 - **Office Desktop**. Sideload you add-in via a [network share](https://msdn.microsoft.com/EN-US/library/office/fp123503.aspx). 
 	- Once side loaded you have to go to `Insert>My Add-ins` and click the `Refresh` button to ensure the Add-in shows. Do this any time you need to refresh your Ribbon.
-- Office Online clients (Coming soon). Simply go to `Insert Tab>Office Add-ins>Upload Add-in`. The add-in will be displayed for that session only. 
+- Office Online clients (Excel online coming soon, should be available by December 11th). Simply go to `Insert Tab>Office Add-ins>Upload Add-in`. The add-in will be displayed for that session only. 
 
-Full documentation and known issues are on the way and will be published soon.  
+
+## Documentation
+- [Full preview instructions and known issues](https://msdn.microsoft.com/EN-US/library/office/mt607161.aspx)
+- Manifest reference (will be published soon)
+ 
 
 
 
