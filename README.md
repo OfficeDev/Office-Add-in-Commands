@@ -16,7 +16,6 @@ Here is how the samples look when running:
 ![](http://i.imgur.com/wrA6R3T.png)
 
 
-
 ## Quick Start
 ### Step 1. Setup your environment
 
