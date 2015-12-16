@@ -13,8 +13,11 @@ Here is how the samples look when running:
 ![](http://i.imgur.com/OsRIk5E.png)
 
 ###Word
+Existing Tab
 ![](http://i.imgur.com/wrA6R3T.png)
 
+Custom Tab (Simple Example)
+![](https://i.imgur.com/HRCbRFO.png)
 
 ## Quick Start
 ### Step 1. Setup your environment
@@ -25,7 +28,7 @@ Here is how the samples look when running:
 - Office Online (Excel online coming soon, should be available by December 11th): There is no additional setup. 
 
 ### Step 2. Create your manifest
-We strongly recommend you to use one of our sample manifests as a starting point ([Excel](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Excel/Manifest/ExcelAddinWithCommandsOnDataTab.xml), [Word](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Word/manifest/CitationSample.xml)), make small modifications (e.g. make them point to your add-in instead, use your icons) and test often. 
+We strongly recommend you to use one of our sample manifests as a starting point, the [Simple example](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Simple) is a good one to get going. Once you make it work then you can start making small modifications and test your changes often. If you make modifications, use the [Manifest reference](https://msdn.microsoft.com/en-us/library/mt621545) as a guide. 
  
 
 ### Step 3. Deploy add-in manifest and test the add-in
