@@ -5,7 +5,7 @@
 
 <!-- BeginBasicSettings: Add-in metadata, used for all versions of Office unless override provided -->
 
-<!--IMPORTANT! Id must be unique for your add-in, if you clone this manifest ensure that you change this id to your own GUID -->
+<!--IMPORTANT! Id must be unique for your add-in. If you clone this manifest ensure that you change this id to your own GUID -->
   <Id>e504fb41-a92a-4526-b101-542f357b7acb</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
@@ -35,7 +35,7 @@
   <!--BeginAddinCommandsMode integration-->
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">   
     <Hosts>
-      <!--Each host can have a different set of commands. Cool uh!? -->
+      <!--Each host can have a different set of commands. Cool huh!? -->
       <!-- Workbook=Excel Document=Word Presentation=PowerPoint -->
       <Host xsi:type="Document">
       	<!-- Form factor. Currenly only DesktopFormFactor is supported. We will add TabletFormFactor and PhoneFormFactor in the future-->
@@ -51,7 +51,7 @@
             <CustomTab id="Contoso.Tab1">
               <!-- Label of your tab -->
               <Label resid="Contoso.Tab1.TabLabel" />
-				<!--Group. Ensure you provide a unique id. Recommendation for any IDs is to namespace using your companyname-->
+				<!--Group. Ensure you provide a unique id. Recommendation for any IDs is to namespace using your company name-->
               <Group id="Contoso.Tab1.Group1">
               	 <!--Label for your group. resid must point to a ShortString resource -->
                 <Label resid="Contoso.Tab1.GroupLabel" />
@@ -100,7 +100,7 @@
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
                     <TaskpaneId>Button2Id1</TaskpaneId>
-                     <!--Provide a url resource id for the location that will be displayed on the taskpane -->
+                     <!--Provide a url resource id for the location that will be displayed on the task pane -->
                     <SourceLocation resid="Contoso.Taskpane1.Url" />
                   </Action>
                 </Control>
