@@ -19,11 +19,7 @@
   <!--BeginTaskpaneMode integration. Office 2013 and any client that doesn't understand commands will use this section.
     This section will also be used if there are no VersionOverrides -->
   <Hosts>
-    <Host Name="Workbook"/>
     <Host Name="Document"/>
-    <Host Name="Presentation"/>
-    <Host Name="Project"/>
-    <Host Name="Database"/>
   </Hosts>
   <DefaultSettings>
     <SourceLocation DefaultValue="https://commandsimple.azurewebsites.net/Taskpane.html" />
@@ -37,6 +33,7 @@
     <Hosts>
       <!--Each host can have a different set of commands. Cool huh!? -->
       <!-- Workbook=Excel Document=Word Presentation=PowerPoint -->
+      <!-- Make sure the hosts you override match the hosts declared in the top section of the manifest -->
       <Host xsi:type="Document">
       	<!-- Form factor. Currenly only DesktopFormFactor is supported. We will add TabletFormFactor and PhoneFormFactor in the future-->
         <DesktopFormFactor>
@@ -49,8 +46,6 @@
           	<!--Use OfficeTab to extend an existing Tab. Use CustomTab to create a new tab -->
             <!-- Documentation includes all the IDs currently tested to work -->
             <CustomTab id="Contoso.Tab1">
-              <!-- Label of your tab -->
-              <Label resid="Contoso.Tab1.TabLabel" />
 				<!--Group. Ensure you provide a unique id. Recommendation for any IDs is to namespace using your company name-->
               <Group id="Contoso.Tab1.Group1">
               	 <!--Label for your group. resid must point to a ShortString resource -->
@@ -155,6 +150,10 @@
             </Control>
 
               </Group>
+
+              <!-- Label of your tab -->
+              <!-- If validating with XSD it needs to be at the end, we might change this before release -->
+              <Label resid="Contoso.Tab1.TabLabel" />
             </CustomTab>
           </ExtensionPoint>
         </DesktopFormFactor>

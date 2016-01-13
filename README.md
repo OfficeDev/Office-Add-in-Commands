@@ -27,8 +27,8 @@ Custom Tab (Simple Example)
 	- **Important**: Once you have the latest build installed make sure to download, unzip and run this [Registry key ](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/raw/master/Tools/AddInCommandsUndark/EnableAppCmdXLWD.zip)on your machine to activate the feature. 
 - Office Online (Excel online coming soon, should be available by December 11th): There is no additional setup. 
 
-### Step 2. Create your manifest
-We strongly recommend you to use one of our sample manifests as a starting point, the [Simple example](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Simple) is a good one to get going. Once you make it work then you can start making small modifications and test your changes often. If you make modifications, use the [Manifest reference](https://msdn.microsoft.com/en-us/library/mt621545) as a guide. 
+### Step 2. Create and validate your manifest
+We strongly recommend you to use one of our sample manifests as a starting point, the [Simple example](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Simple) is a good one to get going. Once you make it work then you can start making small modifications and test your changes often. If you make modifications, use the [Manifest reference](https://msdn.microsoft.com/en-us/library/mt621545) as a guide. You can also validate your xml using the following **[XSDs](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/XSD)**
  
 
 ### Step 3. Deploy add-in manifest and test the add-in

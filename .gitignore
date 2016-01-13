@@ -1,0 +1,8 @@
+Simple/Webapp/App_Data/PublishProfiles/commandsimple (2).pubxml
+*.pubxml
+Simple/Webapp/DeployCommandsSimpleSite.sln
+Simple/Webapp/DeployCommandsSimpleSite.v12.suo
+Simple/Webapp/vwd.webinfo
+Simple/Webapp/Web.config
+Simple/Webapp/Web.Debug.config
+Simple/Webapp/website.publishproj
