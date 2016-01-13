@@ -9,8 +9,14 @@
     <meta http-equiv="pragma" content="no-cache" />
 
     <title></title>
-    <!--Notice that during the preview, Office.js must be referenced from this interim location-->
+    <!--Old-->
+    <!--
     <script src="https://appsforoffice.edog.officeapps.live.com/afo/lib/1.1/hosted/Office.debug.js" type="text/javascript"></script>
+        -->
+
+    <!--Notice that during the preview, Office.js must be referenced from this interim location--->
+    <script src="https://officejscommands.azurewebsites.net/office.js" type="text/javascript"></script>
+    
     <script>
         // The initialize function must be run each time a new page is loaded
         (function () {
@@ -34,6 +40,8 @@
                         //show success.Upcoming displayDialog API will help here.
                     }
                 });
+           //Required, call event.completed to let the platform know you are done processing. 
+	   event.completed();
         }
 
     </script>
