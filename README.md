@@ -41,6 +41,7 @@ During the developer preview the only alternative to test your add-in is to side
 
 
 ## Documentation
+- [FAQ](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/FAQ.md)
 - [Full preview instructions and known issues](https://msdn.microsoft.com/EN-US/library/office/mt607161.aspx)
 - [Manifest reference](https://msdn.microsoft.com/en-us/library/mt621545)
 

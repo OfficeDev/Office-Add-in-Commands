@@ -1,6 +1,6 @@
 **I'm new to Office Add-ins, where do I start?**
 
-If you have never developed an Office Web Add-in before we recommend you to visit our [Get Started](http://dev.office.com/getting-started/addins) experience to understand the basics. Afterwards you can then play with Add-in commands which is a new feature that is in preview currently by following the steps outlined in the [readme](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/XSD). 
+If you have never developed an Office Web Add-in before we recommend you to visit our [Get Started](http://dev.office.com/getting-started/addins) experience to understand the basics. Afterwards you can then play with Add-in commands which is a new feature that is in preview currently by following the steps outlined in the [readme](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/README.md). 
 
 **How do I get the latest Office build needed to try the feature?**
 
