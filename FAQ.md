@@ -20,6 +20,7 @@ Deploying via Visual Studio F5 is not yet supported on the preview. You have to 
 1. Do small tweaks and validate you manifest using the [XSDs](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/XSD)
 1. Double check the reference documentation.  
 1. Verify that in your VersionOverrides you are targeting the correct host. Sometimes folks assume that the hosts declared on the top of the manifest
+2. Verify that you are using the correct Tab element. OfficeTab is to add commands to an existing Office Tab and requires that you pass an existing Id. CustomTab is to create a new tab. Consult the reference documentation for more details. 
 
 In the future we will have better tooling support
 
