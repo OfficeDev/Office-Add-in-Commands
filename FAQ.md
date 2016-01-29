@@ -37,7 +37,7 @@ In the future we will have better tooling support
 **ExecuteFunction isn't working, what are the most common issues?**
 
 1. Check that the FunctionFile is loading properly, use Fiddler to see if a network call is being issued. 
-2. Ensure you are using HTTPS and that the certificate doesn't give any warnings as this would prevent the FunctionFile from loading. If you use a local server sometimes using the IP will warn but using localhost would work fine. 
+2. Ensure you are using *HTTPS and that the certificate doesn't give any warnings* as this would prevent the FunctionFile from loading. If you use a local server sometimes using the IP will warn but using localhost would work fine. 
 3. Make sure you manifest has the correct resource ID and that the URL for your function file is correct
 4. Ensure that the name of your FunctionFile in the manifest is the same as your function in javascript. 
 5. Verify that the function is defined in the GLOBAL scope for javascript. A function defined inside a different scope won't work. 
