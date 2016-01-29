@@ -1,3 +1,5 @@
+#FAQ
+###Setup/Getting Started
 **I'm new to Office Add-ins, where do I start?**
 
 If you have never developed an Office Web Add-in before we recommend you to visit our [Get Started](http://dev.office.com/getting-started/addins) experience to understand the basics. Afterwards you can then play with Add-in commands which is a new feature that is in preview currently by following the steps outlined in the [readme](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/README.md). 
@@ -10,9 +12,15 @@ Please see the [readme](https://github.com/OfficeDev/Office-Add-in-Commands-Samp
 
 Please see the [readme](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/README.md).  
 
+
+###Debug: Buttons not showing
 **I'm using Visual Studio F5 to deploy my add-in but I don't see any buttons on the Ribbon, why?**
 
 Deploying via Visual Studio F5 is not yet supported on the preview. You have to use a network share per instructions on the [readme](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/README.md). 
+
+**I deployed the Add-in manifest using a SharePoint App Catalog, which shows as "My organization" in the insertion dialog and I don't see buttons on the Ribbon, Why?**
+
+During the preview only Network share (which appears as "Shared Folder") is supported. Make sure to hit refresh to trigger loading of your Add-ins
 
 **Its really hard to debug why a button doesn't show up, what can I do?**
 
@@ -24,9 +32,17 @@ Deploying via Visual Studio F5 is not yet supported on the preview. You have to 
 
 In the future we will have better tooling support
 
-**I deployed the Add-in manifest using a SharePoint App Catalog, which shows as "My organization" in the insertion dialog and I don't see buttons on the Ribbon, Why?**
+###Debug: ExecuteFunction not showing
 
-During the preview only Network share (which appears as "Shared Folder") is supported. Make sure to hit refresh to trigger loading of your Add-ins
+**ExecuteFunction isn't working, what are the most common issues?**
+
+1. Check that the FunctionFile is loading properly, use Fiddler to see if a network call is being issued. 
+2. Ensure you are using HTTPS and that the certificate doesn't give any warnings as this would prevent the FunctionFile from loading. If you use a local server sometimes using the IP will warn but using localhost would work fine. 
+3. Make sure you manifest has the correct resource ID and that the URL for your function file is correct
+4. Ensure that the name of your FunctionFile in the manifest is the same as your function in javascript. 
+5. Verify that the function is defined in the GLOBAL scope for javascript. A function defined inside a different scope won't work. 
+
+###Debug: Misc
 
 **Will users still have to go to the insertion dialog to make the add-ins show their buttons?**
 
