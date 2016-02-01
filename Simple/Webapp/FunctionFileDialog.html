@@ -14,11 +14,12 @@
     <script src="https://appsforoffice.edog.officeapps.live.com/afo/lib/1.1/hosted/Office.debug.js" type="text/javascript"></script>
         -->
 
-    <!--Notice that during the preview, Office.js must be referenced from this interim location -->
+    <!--Notice that during the preview, Office.js must be referenced from this interim location
     <script src="https://officejscommands.azurewebsites.net/office.js" type="text/javascript"></script>
+    --->
     
-    
-
+    <!--LOAD FROM YI's Box, internal only-->
+    <script src="https://dialogtestsite.azurewebsites.net/office.debug.js" type="text/javascript"></script>
     
     <script>
         // The initialize function must be run each time a new page is loaded
@@ -28,12 +29,11 @@
             };
         })();
 
-            //Notice function needs to be in global namespace
-        function writeText(event) {
+        function writeToDoc(text)
+        {
+      //Consult Office.js API reference to see all you can do. This just shows the simplest action. 
 
-            //Consult Office.js API reference to see all you can do. This just shows the simplest action. 
-
-            Office.context.document.setSelectedDataAsync("ExecuteFunction Works. Button ID=" + event.source.id,
+            Office.context.document.setSelectedDataAsync("Message=" + text,
                 function (asyncResult) {
                     var error = asyncResult.error;
                     if (asyncResult.status === "failed") {
@@ -43,9 +43,36 @@
                         //show success.Upcoming displayDialog API will help here.
                     }
                 });
-           //Required, call event.completed to let the platform know you are done processing. 
-	   event.completed();
         }
+            //Notice function needs to be in global namespace
+        function writeText(event) {
+            writeToDoc(event.source.id)
+           //Required, call event.completed to let the platform know you are done processing. 
+	        event.completed();
+        }
+        
+         function showDialog(event)
+        {
+            
+          Office.context.ui.displayDialogAsync("https://commandsimple.azurewebsites.net/Dialog.html", 
+		  {height:80, width:50, requireHTTPS: true}, 
+		  launchDialogCallback);
+          
+           //Required, call event.completed to let the platform know you are done processing. 
+	       event.completed();
+            
+        }
+        
+           function launchDialogCallback(asyncResult){
+	       _dialog = asyncResult.value;
+	       _dialog.addEventHandler(Microsoft.Office.WebExtension.EventType.DialogMessageReceived, addStatus);
+	       _dialog.addEventHandler(Microsoft.Office.WebExtension.EventType.DialogEventReceived, addCloseStatus);
+      }
+      
+       function addStatus(arg){
+	       writeToDoc(arg.message);
+       }
+
 
     </script>
 </head>

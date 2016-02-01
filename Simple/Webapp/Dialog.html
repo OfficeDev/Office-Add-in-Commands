@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSOM DCR Test</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <script type="text/javascript" src="\MicrosoftAjax.js"></script>
+    <script type="text/javascript" src="\office.debug.js"></script>
+</head>
+<script type="text/javascript">
+    var _OM;
+    var _dialog;
+
+    Office.initialize = function (reason) {
+        _OM = Office.context.document;
+   }
+
+   function printStatus(arg){
+	text.value = arg.status
+   }
+
+   function addStatus(arg){
+	text.value = text.value + "1";
+   }
+
+   function MessageParent() {
+	Office.context.ui.messageParent("check");
+   }
+
+   function MessageParentBasic() {
+	text.value = window.external.MessageParent("basic")
+   }
+
+   function RedirectPage() {
+	window.location.href = "http://hash-authsample.azurewebsites.net/App/Home2/JSOMCall.html"
+   }
+
+    window.h = function (args) { text.value = args.type }
+
+    window.s = function (result) { 
+        if(arg.status=="failed"){
+            text.value=arg.error.message;
+        }else{
+            text.value=arg.status;
+        }
+    }
+
+    window.v = function (result) { 
+        if(arg.status=="failed"){
+            text.value=arg.error.message;
+        }else{
+            text.value=arg.value;
+        }
+    }
+
+    function addConsole() { document.getElementById('consoles').appendChild(newConsole()) }
+
+    function newConsole() {
+        var d = document.createElement("div");
+
+        var ta = document.createElement("textarea");
+        ta.rows = 10;
+        ta.cols = 40;
+
+        var run = document.createElement("button");
+        run.appendChild(document.createTextNode("run script"));
+        run.addEventListener("click", function () { eval(ta.value); return false; });
+
+        var del = document.createElement("button");
+        del.appendChild(document.createTextNode("remove"));
+        del.addEventListener("click", function () { d.parentNode.removeChild(d) });
+
+        d.appendChild(ta);
+        d.appendChild(run);
+        d.appendChild(del);
+
+        return d;
+    }
+
+    function runConsoles() {
+        var script = "";
+        var tas = document.getElementsByTagName("textarea");
+        for (var index = 0; index < tas.length; index++)
+            script += tas[index].value + ";";
+        eval(script);
+    }
+
+</script>
+
+<body>
+
+    <div>
+	<div id="consoles">
+	</div>
+	<button onclick="addConsole()">add console</button>
+	<button onclick="runConsoles()">run all</button>
+    </div>
+
+JSOM Dialog Test
+
+            <input type="button" onclick="MessageParentBasic()" value="MessageParentBasic" id="MessageParentBasic"/>
+            <input type="button" onclick="MessageParent()" value="MessageParent" id="MessageParent"/>
+           <input type="button" onclick="RedirectPage()" value="RedirectPage" id="RedirectPage"/>
+           
+            <textarea id="text" cols="20" rows="10"></textarea>
+</body>
+</html>
