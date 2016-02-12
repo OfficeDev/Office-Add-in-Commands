@@ -17,7 +17,7 @@
 
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    
+
     <!--Interim Office.js file used during the preview-->
     <script src="https://appsforoffice.edog.officeapps.live.com/afo/lib/1.1/hosted/Office.debug.js" type="text/javascript"></script>
     <script>
@@ -25,37 +25,52 @@
         (function () {
         Office.initialize = function (reason) {
             $(document).ready(function () {
-                $("#writeTextButton").click(function (event) {
-                    writeText();
+                $("#insertImageButton").click(function (event) {
+                    insertImage();
                 });
                 //
             });
         };
 
-        // Reads data from current document selection and displays a notification
-        function writeText() {
-            Office.context.document.setSelectedDataAsync("Data here",
-                function (asyncResult) {
-                    var error = asyncResult.error;
-                    if (asyncResult.status === "failed") {
-                        //show error. Upcoming displayDialog API will help here.
-                    }
-                    else {
-                        //show success.Upcoming displayDialog API will help here.
-                    }
-                });
+        function insertImage()
+        {
+            insertPictureAtSelection(getImageAsBase64());
+        }
+
+        function insertPictureAtSelection(base64EncodedImageStr) {
+
+            Office.context.document.setSelectedDataAsync(base64EncodedImageStr, {
+                coercionType: Office.CoercionType.Image,
+                imageLeft: 50,
+                imageTop: 50,
+                imageWidth: 100,
+                imageHeight: 100
+            },
+               function (asyncResult) {
+                   if (asyncResult.status === Office.AsyncResultStatus.Failed) {
+                       console.log("Action failed with error: " + asyncResult.error.message);
+                   }
+               });
+        }
+
+        function getImageAsBase64() {
+            return ("iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAJFBMVEX///9GRkZGRkZGRkZGRkZGRkZGRkZGRkYBpO9/ugDyUCL/uQGm4PjWAAAACHRSTlMBCQ0RFRknMx7uViEAAAB3SURBVGje7dcxCYBQGEXhi6izYBHB0RIiiAXkzW5iAMEKFnCwguVscJd/ecM5Ab79SNHK5FqlZXeNql/XIx23awMAAAAAAAAAAAAAAAAAyBwIvzNJxeyapLZ3Naou1ykNn6sDAAAAAAAAAAAAAAAAAMgcCL9ztB/UhshWs1l/WAAAAABJRU5ErkJggg==");
+
         }
 
         })();
 
 
+
+
+
     </script>
 </head>
 <body>
-    <button class="ms-Button" id="writeTextButton">
+    <button class="ms-Button" id="insertImageButton">
         <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
-        <span class="ms-Button-label">Insert Text</span>
-        <span class="ms-Button-description">Insert Text into Document</span>
+        <span class="ms-Button-label">Insert Picture</span>
+        <span class="ms-Button-description">Insert Picture into Document</span>
     </button>
 </body>
 </html>
