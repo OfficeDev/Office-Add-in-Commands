@@ -14,7 +14,7 @@
   <Description DefaultValue="Imange Bank Example"/>
   
   <!--Icon for your add-in. Used on installation screens and the add-ins dialog -->
-  <IconUrl DefaultValue="https://i.imgur.com/LltG56v.png" />
+  <IconUrl DefaultValue="https://i.imgur.com/jdPJs1D.png" />
   
         <!--Todo: Add requirement sets and remove  commenting of high res icon -->
       <!--The HighResolutionIcon element is commented because it is valid only for 1.1 (or above) versions of the manifest.
