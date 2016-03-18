@@ -32,7 +32,7 @@ During the preview only Network share (which appears as "Shared Folder") is supp
 
 In the future we will have better tooling support
 
-###Debug: ExecuteFunction not showing
+###Debug: ExecuteFunction not working
 
 **ExecuteFunction isn't working, what are the most common issues?**
 
