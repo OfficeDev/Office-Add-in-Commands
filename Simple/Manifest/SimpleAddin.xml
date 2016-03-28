@@ -58,7 +58,7 @@
                   <bt:Image size="32" resid="Contoso.TaskpaneButton.Icon" />
                   <bt:Image size="80" resid="Contoso.TaskpaneButton.Icon" />
                 </Icon>
-                <Tooltip resid="Contoso.FunctionButton.Tooltip" />
+                
                 <!--Control. It can be of type "Button" or "Menu" -->
                 <Control xsi:type="Button" id="Contoso.FunctionButton">
                 <!--Label for your button. resid must point to a ShortString resource -->
