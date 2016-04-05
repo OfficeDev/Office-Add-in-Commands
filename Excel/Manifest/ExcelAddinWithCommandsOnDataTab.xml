@@ -52,6 +52,20 @@
       <Host xsi:type="Workbook">
         <!-- Form factor. Currenly only DesktopFormFactor is supported. We will add TabletFormFactor and PhoneFormFactor in the future-->
         <DesktopFormFactor>
+          <!--GetStarted information used on the callout that appears when installing the add-in. 
+            Ensure you have build 16.0.6769 or above for GetStarted section to work-->
+          <GetStarted>
+						<!--Title of the Getting Started callout. resid points to a ShortString resource -->
+						<Title resid="Contoso.GetStarted.Title"/>
+						
+						<!--Description of the Getting Started callout. resid points to a LongString resource -->
+						<Description resid="Contoso.GetStarted.Description"/>
+						
+						<!--Not used right now but you need to provide a valid resource. We will add code in the future to consume this URL. 
+							resid points to a Url resource -->
+						<LearnMoreUrl resid="Contoso.GetStarted.LearnMoreUrl"/>
+					</GetStarted>
+          
           <!--Function file is an html page that includes the javascript where functions for ExecuteAction will be called. 
             Think of the FunctionFile as the "code behind" ExecuteFunction -->
           <FunctionFile resid="residDesktopFuncUrl" />
@@ -214,6 +228,9 @@
         </bt:Url>
         <bt:Url id="residUnitConverterUrl" DefaultValue="https://odsample.azurewebsites.net/Pages/Home.aspx?33">
         </bt:Url>
+        <!--LearnMore URL currently not used -->
+        <bt:Url id="Contoso.GetStarted.LearnMoreUrl" DefaultValue="https://odsample.azurewebsites.net/Pages/GetStarted.html">
+        </bt:Url>
       </bt:Urls>
       <bt:ShortStrings>
         <!-- ShortStrings max characters==125 -->
@@ -232,12 +249,19 @@
         <bt:String id="residLabel5" DefaultValue="Another Command">
           <bt:Override Locale="ja-jp" Value="JA-JP Multiple Buttons" />
         </bt:String>
+        <bt:String id="Contoso.GetStarted.Title" DefaultValue="OData Sample Loaded Successfully">
+          <bt:Override Locale="ja-jp" Value="JA-JP Get Started Title" />
+        </bt:String>        
+        
       </bt:ShortStrings>
       <bt:LongStrings>
-         <!-- ShortStrings max characters==250 -->
+         <!-- LongStrings max characters==250 -->
         <bt:String id="residToolTip" DefaultValue="Multiple Buttons Tooltip">
           <bt:Override Locale="ja-jp" Value="JA-JP Multiple Buttons Tooltip" />
         </bt:String>
+             <bt:String id="Contoso.GetStarted.Description" DefaultValue="Get going by opening the DATA tab on the Ribbon then click the ODATA INTEGRATION>GET DATA button to try this Add-in">
+          <bt:Override Locale="ja-jp" Value="JA-JP Get Started Title" />
+        </bt:String>      
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

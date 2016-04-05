@@ -37,6 +37,21 @@
       <Host xsi:type="Document">
       	<!-- Form factor. Currenly only DesktopFormFactor is supported. We will add TabletFormFactor and PhoneFormFactor in the future-->
         <DesktopFormFactor>
+          
+           <!--GetStarted information used on the callout that appears when installing the add-in. 
+            Ensure you have build 16.0.6769 or above for GetStarted section to work-->
+          <GetStarted>
+						<!--Title of the Getting Started callout. resid points to a ShortString resource -->
+						<Title resid="Contoso.GetStarted.Title"/>
+						
+						<!--Description of the Getting Started callout. resid points to a LongString resource -->
+						<Description resid="Contoso.GetStarted.Description"/>
+						
+						<!--Not used right now but you need to provide a valid resource. We will add code in the future to consume this URL. 
+							resid points to a Url resource -->
+						<LearnMoreUrl resid="Contoso.GetStarted.LearnMoreUrl"/>
+					</GetStarted>
+          
         	<!--Function file is an html page that includes the javascript where functions for ExecuteAction will be called. 
             Think of the FunctionFile as the "code behind" ExecuteFunction-->
           <FunctionFile resid="Contoso.FunctionFile.Url" />
@@ -168,6 +183,9 @@
         <bt:Url id="Contoso.FunctionFile.Url" DefaultValue="https://commandsimple.azurewebsites.net/FunctionFile.html" />
         <bt:Url id="Contoso.Taskpane1.Url" DefaultValue="https://commandsimple.azurewebsites.net/Taskpane.html" />
         <bt:Url id="Contoso.Taskpane2.Url" DefaultValue="https://commandsimple.azurewebsites.net/Taskpane2.html" />
+         <!--LearnMore URL currently not used -->
+        <bt:Url id="Contoso.GetStarted.LearnMoreUrl" DefaultValue="https://commandsimple.azurewebsites.net/GetStarted.html">
+        </bt:Url>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="Contoso.FunctionButton.Label" DefaultValue="Execute Function" />
@@ -177,6 +195,9 @@
         <bt:String id="Contoso.Item2.Label" DefaultValue="Show Taskpane 2" />
         <bt:String id="Contoso.Tab1.GroupLabel" DefaultValue="Test Group" />
          <bt:String id="Contoso.Tab1.TabLabel" DefaultValue="Test Tab" />
+         <bt:String id="Contoso.GetStarted.Title" DefaultValue="Simple add-in was succesfully loaded">
+          <bt:Override Locale="ja-jp" Value="JA-JP Get Started Title" />
+        </bt:String>      
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="Contoso.FunctionButton.Tooltip" DefaultValue="Click to Execute Function" />
@@ -184,6 +205,9 @@
         <bt:String id="Contoso.Dropdown.Tooltip" DefaultValue="Click to Show Options on this Menu" />
         <bt:String id="Contoso.Item1.Tooltip" DefaultValue="Click to Show Taskpane1" />
         <bt:String id="Contoso.Item2.Tooltip" DefaultValue="Click to Show Taskpane2" />
+          <bt:String id="Contoso.GetStarted.Description" DefaultValue="Get going by opening TEST TAB on the Ribbon">
+          <bt:Override Locale="ja-jp" Value="JA-JP Get Started Title" />
+        </bt:String>  
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

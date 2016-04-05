@@ -51,6 +51,20 @@
       <Host xsi:type="Presentation">
         <!-- Form factor. Currenly only DesktopFormFactor is supported. We will add TabletFormFactor and PhoneFormFactor in the future-->
         <DesktopFormFactor>
+          <!--GetStarted information used on the callout that appears when installing the add-in. 
+            Ensure you have build 16.0.6769 or above for GetStarted section to work-->
+          <GetStarted>
+						<!--Title of the Getting Started callout. resid points to a ShortString resource -->
+						<Title resid="Contoso.GetStarted.Title"/>
+						
+						<!--Description of the Getting Started callout. resid points to a LongString resource -->
+						<Description resid="Contoso.GetStarted.Description"/>
+						
+						<!--Not used right now but you need to provide a valid resource. We will add code in the future to consume this URL. 
+							resid points to a Url resource -->
+						<LearnMoreUrl resid="Contoso.GetStarted.LearnMoreUrl"/>
+					</GetStarted>
+          
            <!--Function file is an html page that includes the javascript where functions for ExecuteAction will be called. 
             Think of the FunctionFile as the "code behind" ExecuteFunction 
             This sample doesn't use this file, just adding the element for reference-->
@@ -118,6 +132,9 @@
         </bt:Url>
         <bt:Url id="residImageHomeUrl" DefaultValue="https://imageaddin.azurewebsites.net/Photo.html">
         </bt:Url>
+        <!--LearnMore URL currently not used -->
+        <bt:Url id="Contoso.GetStarted.LearnMoreUrl" DefaultValue="https://imageaddin.azurewebsites.net/GetStarted.html">
+          </bt:Url>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="residLabel3" DefaultValue="Photo">
@@ -126,11 +143,17 @@
         <bt:String id="residLabel4" DefaultValue="Image Bank">
           <bt:Override Locale="ja-jp" Value="JA-JP Image Bank" />
         </bt:String>
+         <bt:String id="Contoso.GetStarted.Title" DefaultValue="Amazing pictures await you!">
+          <bt:Override Locale="ja-jp" Value="JA-JP Amazing pictures await you!" />
+        </bt:String>  
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="residToolTip" DefaultValue="Insert awesome photos into your documents">
           <bt:Override Locale="ja-jp" Value="JA-JP Multiple Buttons Tooltip" />
         </bt:String>
+           <bt:String id="Contoso.GetStarted.Description" DefaultValue="Insert awesome pictures in your documents by going to the INSERT tab on the Ribbon then click IMAGE BANK>PHOTO">
+          <bt:Override Locale="ja-jp" Value="JA-JP Get Started Title" />
+        </bt:String>      
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
