@@ -16,11 +16,11 @@ Please see the [readme](https://github.com/OfficeDev/Office-Add-in-Commands-Samp
 ###Debug: Buttons not showing
 **I'm using Visual Studio F5 to deploy my add-in but I don't see any buttons on the Ribbon, why?**
 
-Deploying via Visual Studio F5 is not yet supported on the preview. You have to use a network share per instructions on the [readme](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/README.md). 
+Deploying via Visual Studio F5 is in preview. See instructions at the bottom of [readme](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/README.md). 
 
 **I deployed the Add-in manifest using a SharePoint App Catalog, which shows as "My organization" in the insertion dialog and I don't see buttons on the Ribbon, Why?**
 
-During the preview only Network share (which appears as "Shared Folder") is supported. Make sure to hit refresh to trigger loading of your Add-ins
+Deploying Add-ins with commands via the SharePoint Add-in Catalog is not supported
 
 **Its really hard to debug why a button doesn't show up, what can I do?**
 
@@ -50,5 +50,6 @@ After we GA the feature later this year, once your add-in is installed it will h
 
 **I found an issue, I have a question or I have a feature request, where do I log that?**
 
-During the preview, feel free to use the [Issues](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/issues) of this repo to log. 
+- Documentation, samples issues or bugs please use [Issues](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/issues) of this repo to log. 
+- New feature requests please log them at [user voice](https://officespdev.uservoice.com/) 
 

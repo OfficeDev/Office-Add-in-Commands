@@ -33,17 +33,22 @@ We strongly recommend you to use one of our sample manifests as a starting point
  
 
 ### Step 3. Deploy add-in manifest and test the add-in
-To test your add-in you must sideload it. Support for deploying directly from Visual Studio (F5) will be released soon. In the meantime **you must sideload your manifest using one of the methods below.** 
-
-
+To test your add-in you must register it with Office. Two methods are currently supported
+####Sideload directly to the client
 - **Office Desktop**. Sideload you add-in via a [network share](https://msdn.microsoft.com/EN-US/library/office/fp123503.aspx). 
 	- Once side loaded you have to go to `Insert>My Add-ins>Shared Folder` and click the `Refresh` button to ensure the Add-in shows. Do this any time you need to refresh your Ribbon.
-- **Office Online** clients. Simply go to `Insert>Office Add-ins>Upload Add-in`
+- **Office Online** clients. Simply go to `Insert>Office Add-ins>Upload Add-in
+
+####Visual Studio F5 (Preview)
+Support for Visual Studio F5 is in preview. Follow these steps to enable it. 
+
+-  Make sure you have the latest [Visual Studio tools](https://www.visualstudio.com/en-us/features/office-tools-vs.aspx) 
+- Enable F5 support for commands by running this [registry key](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Tools/AddInCommandsUndark/EnableCmds_F5_VS.zip?raw=true)
+- Apply this [workaround](tools/VSCacheWorkaround.md) to fix an issue with commands caching
 
 
 ## Documentation
 - [FAQ](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/FAQ.md)
-- [Full instructions and known issues](https://msdn.microsoft.com/EN-US/library/office/mt607161.aspx)
 - [Manifest reference](https://msdn.microsoft.com/en-us/library/mt621545)
 
 
