@@ -30,7 +30,8 @@ Existing Tab
 
 ### Step 2. Create and validate your manifest
 We strongly recommend you to use one of our sample manifests as a starting point, the [Simple example](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Simple) is a good one to get going. Once you make it work then you can start making small modifications and test your changes often. If you make modifications, use the [Manifest reference](https://msdn.microsoft.com/en-us/library/mt621545) as a guide. You can also validate your xml using the following **[XSDs](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/XSD)**
- 
+
+You can also use the latest Visual Studio Tools to create and debug your add-in. See next step. 
 
 ### Step 3. Deploy add-in manifest and test the add-in
 To test your add-in you must register it with Office. Two methods are currently supported
