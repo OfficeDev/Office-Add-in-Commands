@@ -21,7 +21,7 @@ Existing Tab
 
 
 ## Quick Start
-### Step 1. Setup your environment and activate the feature
+### Step 1. Setup your environment
 
 
 - **Office Desktop**: Ensure that you have the latest version of Office installed. Add-in commands require build **16.0.6769.0000** or higher. Learn how to [Install the latest version of Office applications](http://aka.ms/latestoffice). 
