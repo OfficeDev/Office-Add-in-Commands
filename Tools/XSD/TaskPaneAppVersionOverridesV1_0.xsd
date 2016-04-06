@@ -18,6 +18,7 @@
         <xs:sequence>
           <xs:element name="TaskpaneId" type="bt:ShortString" minOccurs="0" maxOccurs="1"/>
           <xs:element name="SourceLocation" type="bt:URLResourceReference" minOccurs="1" maxOccurs="1" />
+          <xs:element name="Title" type="bt:ShortResourceReference" minOccurs="0" maxOccurs="1" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -169,7 +170,7 @@
   <xs:complexType name="Group">
     <xs:annotation>
       <xs:documentation>
-        Specifies a specific group of user interface extension points in a tab in the host.
+        Specifies a specific group of user interface extension points in a tab in the Office client application.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -189,7 +190,7 @@
   <xs:complexType name="Tab" abstract="true">
     <xs:annotation>
       <xs:documentation>
-        Specifies a specific tab in the host where an app will customize the user interface.
+        Specifies a tab in the Office client application where this Office add-in will customize the user interface.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -207,7 +208,7 @@
   <xs:complexType name="OfficeMenu">
     <xs:annotation>
       <xs:documentation>
-        Specifies a menu in the host where an app will customize the menu.
+        Specifies a built-in menu of the Office client application to add this Office add-in
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
@@ -216,7 +217,7 @@
     <xs:attribute name="id" type="bt:ShortString" use="required">
       <xs:annotation>
         <xs:documentation>
-          Specifies the identifier of the menu to which the control belongs. 
+          Specifies the identifier of the built-in menu to which the controls will be added
         </xs:documentation>
       </xs:annotation>
     </xs:attribute>
@@ -225,7 +226,7 @@
   <xs:complexType name="OfficeTab">
     <xs:annotation>
       <xs:documentation>
-        Specifies an extension to a pre-existing tab in the host where an app will customize the user interface. Currently supported Tab id values for this element are "TabDefault".
+        Specifies an extension to a pre-existing tab in the Office client application where this Office add-in will customize the user interface.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -236,7 +237,7 @@
   <xs:complexType name="CustomTab">
     <xs:annotation>
       <xs:documentation>
-        Specifies an app defined tab in the host where an app will customize the user interface.
+        Specifies an Office add-in defined tab in the Office client application where this Office add-in will customize the user interface.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -253,7 +254,7 @@
   <xs:complexType name="ExtensionPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>
-        Specifies a location in a host where the app exposes functionality.
+        Specifies a location in the Office client application where the Office add-in exposes functionality.
       </xs:documentation>
     </xs:annotation>
   </xs:complexType>
@@ -261,7 +262,7 @@
   <xs:complexType name="CommandSurfaceExtensionPoint" abstract="true">
     <xs:annotation>
       <xs:documentation>
-        Specifies locations in a host's user interface where the app exposes functionality.
+        Specifies location in an Office client application's user interface where the Office add-in exposes functionality.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -277,7 +278,7 @@
   <xs:complexType name="PrimaryCommandSurface">
     <xs:annotation>
       <xs:documentation>
-        Specifies the ways the app exposes functionality through the ribbon.
+        Specifies the ways this Office add-in exposes functionality through the primary command display of the Office client application (eg. Desktop Ribbon).
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -288,7 +289,7 @@
   <xs:complexType name="ContextMenu">
     <xs:annotation>
       <xs:documentation>
-        Displays an app command in office Context Menu.
+        Specifies the ways this Office add-in exposes functionality through the context menus of the Office client application.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -302,21 +303,39 @@
   <!-- End extension points-->
 
   <!-- Hosts and form factors -->
-  <xs:complexType name="FormFactor">
+  <xs:complexType name="GetStarted">
     <xs:annotation>
       <xs:documentation>
-        Specifies the list of settings for the app when activated for a given form factor of the host.
+        Specifies the Get Started information for the Office add-in. This information is used at various places on the Office User Interface after user installs an add-in.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
+      <xs:element name="Title" type="bt:ShortResourceReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Description" type="bt:LongResourceReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="LearnMoreUrl" type="bt:URLResourceReference" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="FormFactor">
+    <xs:annotation>
+      <xs:documentation>
+        Specifies the list of settings for the Office add-in when activated for a given form factor of the Office client application.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="GetStarted" type="GetStarted" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>Specifies the Get Started information for the Office add-in. This information is used at various places on the Office User Interface after user installs an add-in.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
       <xs:element name="FunctionFile" type="bt:URLResourceReference" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Specifies the source code file for the app, containing operations it exposes via its extension points, to use when loaded in this form factor.</xs:documentation>
+          <xs:documentation>Specifies the source code file for the Office add-in, containing operations it exposes via its extension points, to use when loaded in this form factor.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ExtensionPoint" type="ExtensionPoint" minOccurs="1" maxOccurs="unbounded">
         <xs:annotation>
-          <xs:documentation>Specifies a location in the host where the app registers itself to perform operations.</xs:documentation>
+          <xs:documentation>Specifies a location in an Office client application where the Office add-in registers itself to perform operations.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -333,7 +352,7 @@
   <xs:complexType name="Workbook">
     <xs:annotation>
       <xs:documentation>
-        Defines a headless TaskPaneApp host details, its supported form factors, and settings for each.
+        Defines add-in command extensions for Excel, including supported form factors.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -341,7 +360,7 @@
         <xs:sequence>
           <xs:element name="DesktopFormFactor" type="FormFactor" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation>Specifies the settings of the app when running in a desktop version of the host.</xs:documentation>
+              <xs:documentation>Specifies the settings of the Office add-in when running in a desktop version of Excel.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -352,7 +371,7 @@
   <xs:complexType name="Document">
     <xs:annotation>
       <xs:documentation>
-        Defines a headless TaskPaneApp host details, its supported form factors, and settings for each.
+        Defines add-in command extensions for Word, including supported form factors.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -360,7 +379,7 @@
         <xs:sequence>
           <xs:element name="DesktopFormFactor" type="FormFactor" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation>Specifies the settings of the app when running in a desktop version of the host.</xs:documentation>
+              <xs:documentation>Specifies the settings of the Office add-in when running in a desktop version of Word.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -371,7 +390,7 @@
   <xs:complexType name="Presentation">
     <xs:annotation>
       <xs:documentation>
-        Defines a headless TaskPaneApp host details, its supported form factors, and settings for each.
+        Defines add-in command extensions for PowerPoint, including supported form factors.
       </xs:documentation>
     </xs:annotation>
     <xs:complexContent>
@@ -379,7 +398,7 @@
         <xs:sequence>
           <xs:element name="DesktopFormFactor" type="FormFactor" minOccurs="0" maxOccurs="1">
             <xs:annotation>
-              <xs:documentation>Specifies the settings of the app when running in a desktop version of the host.</xs:documentation>
+              <xs:documentation>Specifies the settings of the Office add-in when running in a desktop version of PowerPoint.</xs:documentation>
             </xs:annotation>
           </xs:element>
         </xs:sequence>
@@ -390,14 +409,14 @@
   <xs:complexType name="Hosts">
     <xs:annotation>
       <xs:documentation>
-        Specifies the Office client Host type where an app for Office will be activated.
+        Specifies the Office client application types where an Office add-in will be activated.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence minOccurs="1" maxOccurs="unbounded">
       <xs:element name="Host" type="Host">
         <xs:annotation>
           <xs:documentation>
-            Specifies the Office client applications where an app for Office will be activated and its settings.
+            Specifies the Office client application where an Office add-in will be activated.
           </xs:documentation>
         </xs:annotation>
       </xs:element>
@@ -408,23 +427,23 @@
   <xs:complexType name="VersionOverridesV1_0">
     <xs:annotation>
       <xs:documentation>
-        Contains elements for the version 1.0 overrides of the TaskPaneApp office app manifest.
+        Contains elements for the version 1.0 overrides of the Office task pane add-in manifest.
       </xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Description" type="bt:LongResourceReference" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Specifies a more verbose description of the app. If present this value overrides the Description element in any parent portion of the manifest</xs:documentation>
+          <xs:documentation>Specifies a more verbose description of the Office add-in. Overrides the Description element in the parent node of this element in the manifest</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Requirements" type="bt:Requirements" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Specifies the minimum set of Office.js requirements that the app for Office needs to activate</xs:documentation>
+          <xs:documentation>Specifies the minimum set of Office.js requirements that the Office add-in needs to activate. Overrides the Requirements element in the parent node of this element in the manifest.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="Hosts" type="Hosts" minOccurs="1" maxOccurs="1">
+      <xs:element name="Hosts" type="Hosts" minOccurs="0" maxOccurs="1">
         <xs:annotation>
-          <xs:documentation>Specifies a collection of host types and their settings. Overrides the Hosts element in any parent portion of the manifest.</xs:documentation>
+          <xs:documentation>Specifies a collection of Office client application types. Overrides the Hosts element in the parent node of this element in the manifest.</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Resources" type="bt:Resources" minOccurs="0" maxOccurs="1">
@@ -434,7 +453,7 @@
       </xs:element>
       <xs:any id="VersionOverrides" minOccurs="0" maxOccurs="1" namespace="http://schemas.microsoft.com/office/taskpaneappversionoverrides/1.1" processContents="lax">
         <xs:annotation>
-          <xs:documentation>Contains elements for use in future versions of the app platform as they release. These elements may be overrides to previously defined elements or new elements.</xs:documentation>
+          <xs:documentation>Contains elements for use in future versions of the Office add-in platform as they release. These elements may be overrides to previously defined elements or new elements.</xs:documentation>
         </xs:annotation>
        </xs:any>
     </xs:sequence>
@@ -442,7 +461,7 @@
 
   <xs:element name="VersionOverrides" type="VersionOverridesV1_0">
     <xs:annotation>
-      <xs:documentation>Specifies a collection of host types and their settings. Data defined in this element overrides the same data present in any parent portion of this manifest for hosts that support this extended manifest content.</xs:documentation>
+      <xs:documentation>Specifies a collection of Office client application types. Data defined in this element overrides the same data present in the parent node of this element in the manifest for Office client applications that support this extended manifest content.</xs:documentation>
     </xs:annotation>
   </xs:element>
 
