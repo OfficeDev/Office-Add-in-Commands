@@ -2,7 +2,7 @@
 # Office Add-in Commands Samples 
 
 ##Overview
-Add-in commands enable developers to extend the Office user interface such as the Office Ribbon to create awesome, efficient to use add-ins. Watch this [channel9 video](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/316) for a complete overview. The examples in this repo show you how to use add-in commands in Excel, Word and PowerPoint add-ins. If you are looking for information about the already released Add-in commands for **Outlook** head to [http://dev.outlook.com](http://dev.outlook.com)
+Add-in commands enable developers to extend the Office user interface such as the Office Ribbon to create awesome, efficient to use add-ins. Watch this [channel9 video](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2015/316) for a complete overview. The examples in this repo show you how to use add-in commands in Excel, Word and PowerPoint add-ins. If you are looking for information about commands for **Outlook** head to [http://dev.outlook.com](http://dev.outlook.com)
  
 Here is how the samples look when running: 
 
