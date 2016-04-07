@@ -45,7 +45,7 @@ Support for Visual Studio F5 is in preview. Follow these steps to enable it.
 
 -  Make sure you have the latest [Visual Studio tools](https://www.visualstudio.com/en-us/features/office-tools-vs.aspx) 
 - Enable F5 support for commands by running this [registry key](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Tools/AddInCommandsUndark/EnableCmds_F5_VS.zip?raw=true)
-- Apply this [workaround](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Tools/VSCacheWorkaround.mdtools/VSCacheWorkaround.md) to fix an issue with commands caching
+- Apply this [workaround](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Tools/VSCacheWorkaround.md) to fix an issue with commands caching
 
 
 ## Documentation
