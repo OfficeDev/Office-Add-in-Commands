@@ -38,7 +38,7 @@ To test your add-in you must register it with Office. Two methods are currently 
 ####Sideload directly to the client
 - **Office Desktop**. Sideload you add-in via a [network share](https://msdn.microsoft.com/EN-US/library/office/fp123503.aspx). 
 	- Once side loaded you have to go to `Insert>My Add-ins>Shared Folder` and click the `Refresh` button to ensure the Add-in shows. Do this any time you need to refresh your Ribbon.
-- **Office Online** clients. Simply go to `Insert>Office Add-ins>Upload Add-in
+- **Office Online**. Open the Add-ins dialog via `Insert>Office Add-ins` then select `[Manage My Add-ins]>Upload My Add-in` and upload the manifest file you want to test. To remove a sideloaded add-in you have to [clear your HTML LocalStorage](http://superuser.com/questions/519628/clear-html5-local-storage-on-a-specific-page) 
 
 ####Visual Studio F5 (Preview)
 Support for Visual Studio F5 is in preview. Follow these steps to enable it. 
