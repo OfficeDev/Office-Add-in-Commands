@@ -91,7 +91,7 @@
                   </Icon>
                   <!--This is what happens when the command is triggered (E.g. click on the Ribbon). Supported actions are ExecuteFuncion or ShowTaskpane-->
                   <!--Look at the FunctionFile.html page for reference on how to implement the function -->
-                  - <Action xsi:type="ExecuteFunction">
+                  <Action xsi:type="ExecuteFunction">
                   <!--Name of the function to call. This function needs to exist in the global DOM namespace of the function file-->
                     <FunctionName>writeText</FunctionName>
                   </Action>
