@@ -140,7 +140,6 @@
                   </Action>
                 </Control>
               </Group>
-              <Label resid="residLabel4" />
             </OfficeTab>
           </ExtensionPoint>
 
