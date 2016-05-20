@@ -40,13 +40,10 @@ Deploying Add-ins with commands via the SharePoint Add-in Catalog is not support
 
 **The buttons display but icons aren't showing, what are the most common issues?**
 
-1. Check that the URL of the icons is valid. 
+1. Check that the URLs of the icons are valid. 
 2. Ensure you are using *HTTPS and that the certificate doesn't give any warnings* as this would prevent icons from loading. If you use a local server sometimes using the IP will warn but using localhost would work fine. 
 3. Make sure you *DO NOT* send any **no-cache/no-store** headers back as this might prevent icons from being stored and used   
 3. Make sure you manifest has the correct resource ID and that the URL for your icon file is correct
-4. Ensure that the name of your FunctionFile in the manifest is the same as your function in javascript. 
-5. Verify that the function is defined in the GLOBAL scope for javascript. A function defined inside a different scope won't work. 
-
 
 ###Debug: Misc
 
