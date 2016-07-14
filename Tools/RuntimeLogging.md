@@ -20,7 +20,7 @@ If you need to turn the feature off, simply remove the key from the registry.
 ##Diagnose issues with commands
 Runtime Logging is useful to detect **issues with your manifest** that are hard to catch, for example, mismatch between resource Ids, invalid lengths, that are not caught by XSD schema validation. 
 
-Here are the step to try things out:
+Here are the steps to try things out:
  
 1. Follow the instructions on the [Readme](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/README.md) to sideload your add-in. 
 2. If you don't see your Ribbon buttons project and nothing appears on the add-ins dialog, check the logs
