@@ -10,7 +10,7 @@ Full documentation for the feature is on the way but in the meantime here is how
 
 1. Ensure that you have a build that supports Runtime Logging. You need **Office 16 Desktop** clients with build equal or greater than **16.0.7019**
 2. Add the `RuntimeLogging` registry key under `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Wef\Developer\` 
-3. Set the key's default value to the full path of the file where you want the log to be written. See [sample registry key](RuntimeLogging\EnableRuntimeLogging.zip) (unzip)
+3. Set the key's default value to the full path of the file where you want the log to be written. See [sample registry key](RuntimeLogging/EnableRuntimeLogging.zip) (unzip)
 
 Your registry should look like this:
 ![](http://i.imgur.com/Sa9TyI6.png)
