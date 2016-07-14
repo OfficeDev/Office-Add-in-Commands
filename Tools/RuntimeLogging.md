@@ -1,6 +1,6 @@
 #Use Runtime Logging to debug Add-in Commands
 
-Office 16 Desktop clients have a new feature available to log useful information. Among other things, this tool can help you diagnose errors in your add-in manifest which comes particularly handing if you are creating manifests with add-in commands. 
+Office 16 Desktop clients have a new feature available to log useful information. Among other things, this tool can help you diagnose errors in your add-in manifest which comes particularly handy if you are creating manifests with add-in commands. 
 
 Full documentation for the feature is on the way but in the meantime here is how you can use it to debug issues when parsing manifests with add-in commands.
 
@@ -35,4 +35,4 @@ Runtime Logging still has known bugs. You may see several messages that are conf
 
 - The messages `Medium	Current host not in add-in's host list` followed by `Unexpected	Parsed manifest targeting different host` are incorrectly classified. They are not errors, you can safely ignore them.
 - The message `Unexpected	Add-in is missing required manifest fields	DisplayName` doesn't contain the SolutionId of the offending add-in. However, most likely this is NOT related to the add-in you are debugging. 
-- Any `Monitorable` messages are expected. You can safely ignore them. 
+- Any `Monitorable` messages are expected errors from a system point of view. Sometimes they may indicate an issue with your manifest (e.g. a misspelled element that was skipped but didn't cause the manifest to fail). 
