@@ -24,7 +24,7 @@ Deploying Add-ins with commands via the SharePoint Add-in Catalog is not support
 1. Double check the reference documentation.  
 1. Verify that in your VersionOverrides you are targeting the correct host. Sometimes folks assume that the hosts declared on the top of the manifest
 2. Verify that you are using the correct Tab element. OfficeTab is to add commands to an existing Office Tab and requires that you pass an existing Id. CustomTab is to create a new tab. Consult the reference documentation for more details. 
-3. Use **[RuntimeLogging](RuntimeLogging/RuntimeLogging.md)** to diagnose issues with your manifest. 
+3. Use **[RuntimeLogging](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Tools/RuntimeLogging.md)** to diagnose issues with your manifest. 
 
 
 ###Debug: ExecuteFunction not working
