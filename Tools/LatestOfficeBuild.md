@@ -12,7 +12,7 @@ For either program, the build is the same. To deploy it **follow these simplifie
 
 1.	Download the [Office 2016 Deployment Tool](http://www.microsoft.com/en-us/download/details.aspx?id=49117). 
 2.	Run the tool, this will extract 2 files. **Setup.exe** and **configuration.xml**.
-3.	Replace the configuration file with this [First Release Configuration File](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-Commands-Samples/master/Tools/FirstReleaseConfig/configuration.xml).
+3.	Replace the configuration file with this [First Release Configuration File](https://raw.githubusercontent.com/OfficeDev/Office-Add-in-Commands-Samples/master/Tools/FirstReleaseConfig/configuration.xml). If you really want to be on the bleeding age set the channel to "InsidersFast". Make sure you read the details of the program on the links above.
 4.	From an elevated command prompt (Run as admin) run:
     `setup.exe /configure configuration.xml`
 
