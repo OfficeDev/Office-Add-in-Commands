@@ -19,7 +19,8 @@ Deploying Add-ins with commands via the SharePoint Add-in Catalog is not support
 
 ###Debug: Add-in or buttons are not showing up
 
-1. Start with samples
+1. Ensure you are using a supported client/build and catalog. As stated above, the SharePoint App Catalog is not a supported mechanism to deploy add-ins with commands. 
+2. Start with samples
 1. Do small tweaks and validate you manifest using the [XSDs](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/XSD)
 1. Double check the reference documentation.  
 1. Verify that in your VersionOverrides you are targeting the correct host. Sometimes folks assume that the hosts declared on the top of the manifest
