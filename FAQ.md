@@ -55,6 +55,7 @@ Once your add-in is installed it will have its buttons permanently displayed on 
 
 **I found an issue, I have a question or I have a feature request, where do I log that?**
 
-- Documentation, samples issues or bugs please use [Issues](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/issues) of this repo to log. 
+- Issues with the samples please use [Issues](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/issues) of this repo to log. 
+- Question/Additional help use **StackOverflow** and tag with **office-js**. 
 - New feature requests please log them at [user voice](https://officespdev.uservoice.com/) 
 
