@@ -28,6 +28,8 @@ Existing Tab
  
 - **Office Online**: There is no additional setup. Please note that support for commands in Office Online for work/school accounts is in preview.
 
+- **Office for Mac**: See instructions for the [dev preview](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Tools/MacDevPreview.md) 
+
 ### Step 2. Create and validate your manifest
 We strongly recommend you to use one of our sample manifests as a starting point, the [Simple example](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Simple) is a good one to get going. Once you make it work then you can start making small modifications and test your changes often. If you make modifications, use the [Manifest reference](https://msdn.microsoft.com/en-us/library/mt621545) as a guide. You can also validate your xml using the following **[XSDs](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/XSD)** and. For Office Desktop clients you can also use [Runtime Logging](Tools/RuntimeLogging.md) to debug your manifest.
 
@@ -39,6 +41,8 @@ To test your add-in you must register it with Office. Two methods are currently 
 - **Office Desktop**. Sideload you add-in via a [network share](https://msdn.microsoft.com/EN-US/library/office/fp123503.aspx). 
 	- Once side loaded you have to go to `Insert>My Add-ins>Shared Folder` and click the `Refresh` button to ensure the Add-in shows. Do this any time you need to refresh your Ribbon.
 - **Office Online**. Open the Add-ins dialog via `Insert>Office Add-ins` then select `[Manage My Add-ins]>Upload My Add-in` and upload the manifest file you want to test. To remove a sideloaded add-in you have to [clear your HTML LocalStorage](http://superuser.com/questions/519628/clear-html5-local-storage-on-a-specific-page) 
+
+- **Office for Mac**. See instructions for the [dev preview](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Tools/MacDevPreview.md). 
 
 ####Visual Studio F5
 - Make sure you have at least version 16.0.6868.0000 of Office for Windows installed. 
