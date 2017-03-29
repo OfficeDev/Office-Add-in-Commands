@@ -43,9 +43,10 @@ Deploying Add-ins with commands via the SharePoint Add-in Catalog is not support
 **The buttons display but icons aren't showing, what are the most common issues?**
 
 1.  Check that the URLs of the icons are valid.
-2.  Ensure you are using _HTTPS and that the certificate doesn't give any warnings_ as this would prevent icons from loading. If you use a local server sometimes using the IP will warn but using localhost would work fine.
-3.  Make sure you _DO NOT_ send any **no-cache/no-store** headers back as this might prevent icons from being stored and used
-4.  Make sure you manifest has the correct resource ID and that the URL for your icon file is correct
+2.  Check you are using a supported file format for your icon. We recommnend PNG. 
+3.  Ensure you are using _HTTPS and that the certificate doesn't give any warnings_ as this would prevent icons from loading. If you use a local server sometimes using the IP will warn but using localhost would work fine.
+4.  Make sure you _DO NOT_ send any **no-cache/no-store** headers back as this might prevent icons from being stored and used
+5.  Make sure you manifest has the correct resource ID and that the URL for your icon file is correct
 
 ### Debug: Misc
 
