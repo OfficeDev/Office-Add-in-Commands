@@ -10,7 +10,7 @@ Note: If you are looking for information about add-in commands for Outlook for M
 ## Prerequisites
 
 ### Get the Office Insider Fast build
-To develop add-in commands for Office for Mac, you'll need to be running build **15.30(161213)** or later. To get access to that build, opt in to the **Office Insiders Fast** builds. For details, see [Office Insider Fast for Mac Insiders](http://answers.microsoft.com/en-us/msoffice/forum/msoffice_officeinsider-mso_mac/announcing-office-insider-fast-for-mac-insiders/de603f73-3405-49d4-a6ee-d017773cb8a0). 
+To develop add-in commands for Office for Mac, you'll need to be running an Office Insiders (it needs to be insiders right now) build **15.30(161213)** or later. To get access to that build, opt in to the **Office Insiders Fast** builds. For details, see [Office Insider Fast for Mac Insiders](http://answers.microsoft.com/en-us/msoffice/forum/msoffice_officeinsider-mso_mac/announcing-office-insider-fast-for-mac-insiders/de603f73-3405-49d4-a6ee-d017773cb8a0). 
 
 
 ### Enable the commands developer preview
