@@ -1,22 +1,22 @@
 
 # Office Add-in Commands Samples 
 
-##Overview
+## Overview
 Add-in commands enable developers to extend the Office user interface such as the Office Ribbon to create awesome, efficient to use add-ins. Watch this [channel9 video](https://channel9.msdn.com/events/Build/2016/P551) for a complete overview. The examples in this repo show you how to use add-in commands in Excel, Word and PowerPoint add-ins. If you are looking for information about commands for **Outlook** head to [http://dev.outlook.com](http://dev.outlook.com)
  
 Here is how the samples look when running: 
 
-###Custom Tab (Simple Example)
+### Custom Tab (Simple Example)
 ![](https://i.imgur.com/HRCbRFO.png)
 
-###Excel
+### Excel
 ![](http://i.imgur.com/OsRIk5E.png)
 
-###Word
+### Word
 Existing Tab
 ![](http://i.imgur.com/wrA6R3T.png)
 
-###PowerPoint
+### PowerPoint
 ![](http://i.imgur.com/jwkkNsQ.png)
 
 
@@ -37,14 +37,14 @@ You can also use the latest Visual Studio Tools to create and debug your add-in.
 
 ### Step 3. Deploy add-in manifest and test the add-in
 To test your add-in you must register it with Office. Two methods are currently supported:
-####Sideload directly to the client
+#### Sideload directly to the client
 - **Office Desktop**. Sideload you add-in via a [network share](https://msdn.microsoft.com/EN-US/library/office/fp123503.aspx). 
 	- Once side loaded you have to go to `Insert>My Add-ins>Shared Folder` and click the `Refresh` button to ensure the Add-in shows. Do this any time you need to refresh your Ribbon.
 - **Office Online**. Open the Add-ins dialog via `Insert>Office Add-ins` then select `[Manage My Add-ins]>Upload My Add-in` and upload the manifest file you want to test. To remove a sideloaded add-in you have to [clear your HTML LocalStorage](http://superuser.com/questions/519628/clear-html5-local-storage-on-a-specific-page) 
 
 - **Office for Mac**. See instructions for the [dev preview](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Tools/MacDevPreview.md). 
 
-####Visual Studio F5
+#### Visual Studio F5
 - Make sure you have at least version 16.0.6868.0000 of Office for Windows installed. 
 - Make sure you have the latest [Visual Studio tools](https://www.visualstudio.com/en-us/features/office-tools-vs.aspx). 
 
