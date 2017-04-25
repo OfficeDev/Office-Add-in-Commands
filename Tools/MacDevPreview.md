@@ -1,5 +1,9 @@
 # Developer Preview: Add-in commands for Word, Excel, and PowerPoint on Office for Mac
 
+**Update**: Add-in commands for the Mac are now Generally Available with build 15.33+. There is no need to follow the pre-requisites below anymore as the feature is turned on by default now. 
+
+-------------------
+[old article]
 You can use add-in commands to extend the Office UI, for example by adding new buttons on the ribbon. For more information about add-in commands, see [Add-in commands for Word, Excel, and PowerPoint](https://dev.office.com/docs/add-ins/design/add-in-commands). 
 
 ![Add-in commands on Mac](http://i.imgur.com/BhoOt4v.png)
