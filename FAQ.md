@@ -22,7 +22,7 @@ Deploying Add-ins with commands via the SharePoint Add-in Catalog is not support
 
 1.  Ensure you are using a supported client/build and catalog. As stated above, the SharePoint App Catalog is not a supported mechanism to deploy add-ins with commands.
 2.  Start with samples
-3.  Do small tweaks and validate you manifest using the [XSDs](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Tools/XSD)
+3.  Do small tweaks and validate you manifest using the [Office Add-in Validator](https://github.com/OfficeDev/office-addin-validator) 
 4.  Double check the reference documentation.
 5.  Verify that in your VersionOverrides you are targeting the correct host. Sometimes folks assume that the hosts declared on the top of the manifest
 6.  Verify that you are using the correct Tab element. OfficeTab is to add commands to an existing Office Tab and requires that you pass an existing Id. CustomTab is to create a new tab. Consult the reference documentation for more details.
