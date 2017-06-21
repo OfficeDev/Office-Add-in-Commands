@@ -1,10 +1,10 @@
-#Use Runtime Logging to debug Add-in Commands
+# Use Runtime Logging to debug Add-in Commands
 
 Office 16 Desktop clients have a new feature available to log useful information. Among other things, this tool can help you diagnose errors in your add-in manifest which comes particularly handy if you are creating manifests with add-in commands. 
 
 Full documentation for the feature is on the way but in the meantime here is how you can use it to debug issues when parsing manifests with add-in commands.
 
-##Turn On Runtime Logging
+## Turn On Runtime Logging
 
 **Important**: Runtime Logging has a **performance hit**. Only turn it on when you need to debug issues with your add-ins
 
@@ -17,7 +17,7 @@ Your registry should look like this:
 
 If you need to turn the feature off, simply remove the key from the registry. 
 
-##Diagnose issues with commands
+## Diagnose issues with commands
 Runtime Logging is useful to detect **issues with your manifest** that are hard to catch, for example, mismatch between resource Ids, invalid lengths, that are not caught by XSD schema validation. 
 
 Here are the steps to try things out:
@@ -30,7 +30,7 @@ In the example below, RuntimeLogging helped identify a control that is pointing 
 
 ![](http://i.imgur.com/f8bouLA.png) 
 
-##Known issues with logging
+## Known issues with logging
 Runtime Logging still has known bugs. You may see several messages that are confusing or inappropriately classified. For example:
 
 - The messages `Medium	Current host not in add-in's host list` followed by `Unexpected	Parsed manifest targeting different host` are incorrectly classified. They are not errors, you can safely ignore them.
