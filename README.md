@@ -38,11 +38,12 @@ You can also use the latest Visual Studio Tools to create and debug your add-in.
 ### Step 3. Deploy add-in manifest and test the add-in
 To test your add-in you must register it with Office. Two methods are currently supported:
 #### Sideload directly to the client
-- **Office Desktop**. Sideload you add-in via a [network share](https://msdn.microsoft.com/EN-US/library/office/fp123503.aspx). 
-	- Once side loaded you have to go to `Insert>My Add-ins>Shared Folder` and click the `Refresh` button to ensure the Add-in shows. Do this any time you need to refresh your Ribbon.
+- **Office Desktop**. Sideload your add-in via a [network share](https://msdn.microsoft.com/EN-US/library/office/fp123503.aspx). 
+	- Once sideloaded, go to `Insert>My Add-ins>Shared Folder` and click the `Refresh` button to ensure the Add-in shows. Do this any time you need to refresh your Ribbon.
 - **Office Online**. Open the Add-ins dialog via `Insert>Office Add-ins` then select `[Manage My Add-ins]>Upload My Add-in` and upload the manifest file you want to test. To remove a sideloaded add-in you have to [clear your HTML LocalStorage](http://superuser.com/questions/519628/clear-html5-local-storage-on-a-specific-page) 
 
-- **Office for Mac**. See instructions for the [dev preview](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Tools/MacDevPreview.md). 
+- **Office for Mac**. [Sideload your add-in on the Mac](https://dev.office.com/docs/add-ins/testing/sideload-an-office-add-in-on-ipad-and-mac)
+	- Once sideloaded, goto `Insert>Office Add-ins` and click on the add-in to install it.
 
 #### Visual Studio F5
 - Make sure you have at least version 16.0.6868.0000 of Office for Windows installed. 
