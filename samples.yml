@@ -1,0 +1,83 @@
+samples:
+    - name: Auto-opening a Taskpane with a Document
+      relPath: AutoOpenTaskpane/
+      description: The auto-open taskpane feature, part of AddInCommands 1.1 allows you automatically open a pane.
+      readme: https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/AutoOpenTaskpane/README.md
+      screenshots:
+          - relPath: http://i.imgur.com/JtHwr47.png
+            description: Auto-opening a Taskpane with a Document
+            alt: Screenshot of a taskpane
+      generateZip: true
+      indexed: true
+      reviewOnly: true
+      tags:
+          - add-ins
+          - excel
+          - word
+          - taskpane
+          - addincommands
+      azureDeploy:
+      tryNow:
+      author: lezamax
+---
+samples:
+    - name: Create Buttons on an Existing Office Tab
+      relPath: excel/webapp
+      description: This sample showcases how to create buttons on an existing Office tab. The sample also showcases communication between Excel and OData source.
+      readme: https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Excel/Webapp/readme.md
+      screenshots:
+          - relPath:
+            alt:
+      generateZip: true
+      indexed: true
+      reviewOnly: true
+      tags:
+          - add-ins
+          - excel
+          - buttons
+          - OData
+      azureDeploy:
+      tryNow:
+      author: lezamax
+---
+samples:
+    - name: PowerPoint Add-in Commands Sample
+      relPath: powerpoint/api/azure
+      description: A sample that shows how to use Azure APIs
+      readme: https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/PowerPoint/readme.md
+      screenshots:
+          - relPath: http://i.imgur.com/EaQwJMD.png
+            description: PowerPoint Add-in Commands Sample
+            alt: Screenshot of PowerPoint ribbon
+      generateZip: true
+      indexed: true
+      reviewOnly: true
+      tags:
+          - powerpoint
+          - add-ins
+          - buttons
+          - officetab
+      azureDeploy:
+      tryNow:
+      author: lezamax
+---
+samples:
+    - name: Word Add-in Commcands Sample
+      relPath: word/
+      description: This sample showcases how to create buttons on an existing Office tab.
+      readme: https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Word/readme.md
+      screenshots:
+          - relPath:
+            description:
+            alt:
+                generateZip: true
+      indexed: true
+      reviewOnly: true
+      tags:
+          - Word
+          - add-ins
+          - officetab
+          - buttons
+      azureDeploy:
+      tryNow:
+      author: lezamax
