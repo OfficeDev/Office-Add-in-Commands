@@ -1,0 +1,21 @@
+### YamlMime:Sample
+sample:
+- name: Office Add-in Commands Samples
+  path: ''
+  description: The examples in this repo show you how to use add-in commands in Excel, Word and PowerPoint add-ins.
+  readme: ''
+  generateZip: FALSE
+  isLive: TRUE
+  technologies:
+  - Office Add-in
+  azureDeploy: ''
+  author: LezaMax
+  platforms: []
+  languages:
+  - JavaScript
+  extensions:
+    products:
+    - Excel
+    - Word
+    - PowerPoint
+    scenarios: []
