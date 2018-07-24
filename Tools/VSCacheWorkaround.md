@@ -7,7 +7,7 @@ To workaround this issue follow these steps on each add-in project you work on:
 
 1. Open your Project Properties, **Right click on the Project>Project properties>Build Events** in your Add-in project
 2. Include this command line in the **Pre-build event** command line:
-`del %LOCALAPPDATA%\Microsoft\Office\16.0\Wef\AppCommands /q`
+`del "%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\AppCommands" /q`
 ![](http://i.imgur.com/05I2bAv.png)
 1. Run F5. Changes will now be reflected. 
 
