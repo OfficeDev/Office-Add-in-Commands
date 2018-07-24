@@ -11,7 +11,7 @@
   <DefaultLocale>en-US</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various placed of the Office UI such as the add-ins dialog -->
   <DisplayName DefaultValue="Image Bank" />
-  <Description DefaultValue="Imange Bank Example"/>
+  <Description DefaultValue="Image Bank Example"/>
   
   <!--Icon for your add-in. Used on installation screens and the add-ins dialog -->
   <IconUrl DefaultValue="https://i.imgur.com/jdPJs1D.png" />
