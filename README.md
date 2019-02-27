@@ -1,3 +1,19 @@
+---
+topic: sample
+products:
+- Excel
+- Word
+- PowerPoint
+- Office 365
+languages:
+- TypeScript
+- JavaScript
+extensions:
+  contentType: samples
+  technologies:
+  - Add-ins
+  createdDate: 11/6/2015 1:25:00 PM
+---
 
 # Office Add-in Commands Samples 
 
