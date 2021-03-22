@@ -47,7 +47,7 @@ Existing Tab
 - **Office for Mac**: Ensure that you have build 15.33+
 
 ### Step 2. Create and validate your manifest
-We strongly recommend you to use one of our sample manifests as a starting point, the [Simple example](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Simple) is a good one to get going. Once you make it work then you can start making small modifications and test your changes often. If you make modifications, use the [Manifest reference](http://dev.office.com/docs/add-ins/overview/add-in-manifests) as a guide. You can also validate your xml using the [Office Add-in Validator](https://github.com/OfficeDev/office-addin-validator) **. For Office Windows clients you can also use [Runtime Logging](Tools/RuntimeLogging.md) to debug your manifest.
+We strongly recommend you to use one of our sample manifests as a starting point, the [Simple example](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/tree/master/Simple) is a good one to get going. Once you make it work then you can start making small modifications and test your changes often. If you make modifications, use the [Manifest reference](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/add-in-manifests?tabs=tabid-1) as a guide. You can also validate your xml using the [Office Add-in Validator](https://github.com/OfficeDev/office-addin-validator) **. For Office Windows clients you can also use [Runtime Logging](Tools/RuntimeLogging.md) to debug your manifest.
 
 You can also use the latest Visual Studio Tools to create and debug your add-in. See next step. 
 
