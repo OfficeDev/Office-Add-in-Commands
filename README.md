@@ -13,6 +13,7 @@ extensions:
   technologies:
   - Add-ins
   createdDate: 11/6/2015 1:25:00 PM
+description: "The examples in this repo show you how to use add-in commands in Excel, Word and PowerPoint add-ins."
 ---
 
 # Office Add-in Commands Samples 
