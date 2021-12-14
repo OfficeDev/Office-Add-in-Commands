@@ -1,22 +1,8 @@
----
-page_type: sample
-products:
-- office-excel
-- office-word
-- office-powerpoint
-- office-365
-languages:
-- typescript
-- javascript
-extensions:
-  contentType: samples
-  technologies:
-  - Add-ins
-  createdDate: 11/6/2015 1:25:00 PM
-description: "The examples in this repo show you how to use add-in commands in Excel, Word and PowerPoint add-ins."
----
+# [Moved] Office Add-in Commands Samples
 
-# Office Add-in Commands Samples 
+[This sample moved to the Office Add-in samples repo](https://github.com/OfficeDev/PnP-OfficeAddins/tree/main/Samples/office-add-in-commands)
+
+**Note:** This repo is archived and no longer actively maintained. Security vulnerabilities may exist in the project, or its dependencies. If you plan to reuse or run any code from this repo, be sure to perform appropriate security checks on the code or dependencies first. Do not use this project as the starting point of a production Office Add-in. Always start your production code by using the Office/SharePoint development workload in Visual Studio, or the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office), and follow security best practices as you develop the add-in.
 
 ## Overview
 Add-in commands enable developers to extend the Office user interface such as the Office Ribbon to create awesome, efficient to use add-ins. Watch this [channel9 video](https://channel9.msdn.com/events/Build/2016/P551) for a complete overview. The examples in this repo show you how to use add-in commands in Excel, Word and PowerPoint add-ins. If you are looking for information about commands for **Outlook** head to [http://dev.outlook.com](http://dev.outlook.com)
